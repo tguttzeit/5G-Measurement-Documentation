@@ -1,0 +1,155 @@
+<mxfile host="65bd71144e">
+    <diagram id="latency-tester-sm" name="Page-1">
+        <mxGraphModel dx="1262" dy="549" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="21" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="10" y="10" width="1180" height="490" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="group" parent="21" vertex="1" connectable="0">
+                    <mxGeometry width="1180" height="450" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="" style="group" vertex="1" connectable="0" parent="20">
+                    <mxGeometry width="960" height="370" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" parent="51" vertex="1">
+                    <mxGeometry width="960" height="370" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;b&gt;stm&lt;/b&gt; LatencyTester" style="strokeWidth=1;shape=umlFrame;whiteSpace=wrap;html=1;width=140;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" parent="51" vertex="1">
+                    <mxGeometry width="960" height="370" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="fillColor=none;strokeColor=none;container=1;collapsible=0;recursiveResize=0" parent="20" vertex="1">
+                    <mxGeometry x="20" y="70" width="940" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="strokeWidth=1;ellipse;fillColor=strokeColor;" parent="3" vertex="1">
+                    <mxGeometry x="15" y="75" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="strokeWidth=1;rhombus;" parent="3" vertex="1">
+                    <mxGeometry x="75" y="75" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;b&gt;Waiting&lt;/b&gt;" style="html=1;align=center;verticalAlign=middle;rounded=1;absoluteArcSize=1;arcSize=10;fillColor=rgb(255, 255, 255);strokeWidth=1;" parent="3" vertex="1">
+                    <mxGeometry x="305" y="65" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="strokeWidth=1;rhombus;" parent="3" vertex="1">
+                    <mxGeometry x="530" y="75" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;b&gt;Baseline_Test&lt;/b&gt;&lt;br&gt;do / flent_runner.run(baseline_test,&lt;br&gt;baseline_length_s)" style="html=1;align=center;verticalAlign=middle;rounded=1;absoluteArcSize=1;arcSize=10;fillColor=rgb(255, 255, 255);strokeWidth=1;" parent="3" vertex="1">
+                    <mxGeometry x="685" y="60" width="230" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="3" source="5" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="edgeStyle=none;html=1;" parent="3" source="6" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="[enabled &amp;&amp; host is set]&lt;br&gt;/ run_log.open();&lt;br&gt;init both cadences" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="31" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="35" value="" style="edgeStyle=none;html=1;" parent="3" source="8" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="after(poll_interval_s)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="35" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-2" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="37" value="" style="edgeStyle=none;html=1;" parent="3" source="10" target="11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="[baseline due&lt;br&gt;&amp;&amp; vehicle moving]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="37" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="" style="strokeWidth=1;ellipse;html=1;shape=endState;fillColor=strokeColor;" parent="3" vertex="1">
+                    <mxGeometry x="75" y="10" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="stop event&lt;br&gt;/ run_log.close()" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="3" source="8" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="360" y="25"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="" style="edgeStyle=none;html=1;" parent="3" source="6" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="87.9417420270729" y="130.2912898646349" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="34" value="[else]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="33" vertex="1" connectable="0">
+                    <mxGeometry x="-0.5" relative="1" as="geometry">
+                        <mxPoint y="-6" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="" style="strokeWidth=1;rhombus;" parent="20" vertex="1">
+                    <mxGeometry x="550" y="210" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="edgeStyle=none;html=1;entryX=0.636;entryY=1;entryDx=0;entryDy=0;" parent="20" source="12" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="395" y="225"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="46" value="[else]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="45" vertex="1" connectable="0">
+                    <mxGeometry x="-0.85" relative="1" as="geometry">
+                        <mxPoint x="-5" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="39" value="" style="edgeStyle=none;html=1;" parent="20" source="10" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="565" y="180"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="40" value="[else]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="39" vertex="1" connectable="0">
+                    <mxGeometry x="-0.5" relative="1" as="geometry">
+                        <mxPoint y="6" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="41" value="" style="edgeStyle=none;html=1;" parent="20" source="11" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="820" y="225"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="42" value="/ due_at = now + interval_s" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="41" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="103" y="-20" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="43" value="" style="edgeStyle=none;html=1;" parent="20" source="12" target="13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="[load due&lt;br&gt;&amp;&amp; vehicle moving]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="43" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-10" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="&lt;b&gt;Load_Test&lt;/b&gt;&lt;br&gt;do / flent_runner.run(load_test,&lt;br&gt;load_length_s)" style="html=1;align=center;verticalAlign=middle;rounded=1;absoluteArcSize=1;arcSize=10;fillColor=rgb(255, 255, 255);strokeWidth=1;" parent="20" vertex="1">
+                    <mxGeometry x="480" y="280" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="" style="edgeStyle=none;html=1;entryX=0.364;entryY=1;entryDx=0;entryDy=0;" parent="20" source="13" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="365" y="310"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="48" value="/ due_at = now + interval_s" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="47" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-5" y="-10" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="LatencyTester" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;rounded=1;absoluteArcSize=1;arcSize=50;" parent="21" vertex="1">
+                    <mxGeometry x="20" y="40" width="930" height="320" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,15 @@
+[Unit]
+Description=Rebuild the 5GMU documentation site periodically
+Documentation=https://github.com/tguttzeit/5G-Measurement-Documentation
+
+[Timer]
+# Shortly after boot and every 10 minutes after that. A run exits immediately
+# unless the documentation repository or one of the mirrored repositories has
+# changed.
+OnBootSec=2min
+OnUnitActiveSec=10min
+AccuracySec=1min
+Unit=5gm-docs.service
+
+[Install]
+WantedBy=timers.target

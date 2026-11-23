@@ -1,0 +1,23 @@
+/* THA colors (corporate red #FF0350, greys #585858 / #808080), applied through the
+   custom primary and accent palette of zensical.base.toml. Body links use a darker red
+   in the light scheme, since #FF0350 on white stays below a 4.5:1 contrast. */
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color: #e00046;
+  --md-primary-fg-color--light: #ff0350;
+  --md-primary-fg-color--dark: #b8003a;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #ffffffb3;
+  --md-typeset-a-color: #e00046;
+}
+[data-md-color-scheme="slate"][data-md-color-primary="custom"] {
+  --md-primary-fg-color: #ff0350;
+  --md-primary-fg-color--light: #ff4d7d;
+  --md-primary-fg-color--dark: #e00046;
+  --md-typeset-a-color: #ff3d70;
+}
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color: #ff0350;
+  --md-accent-fg-color--transparent: #ff03501a;
+  --md-accent-bg-color: #ffffff;
+  --md-accent-bg-color--light: #ffffffb3;
+}

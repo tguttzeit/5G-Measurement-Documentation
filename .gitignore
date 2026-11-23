@@ -1,0 +1,20 @@
+# Zensical build output and cache
+site-i18n/
+.cache/
+
+# Per-language build (scripts/build_i18n.py)
+.stage/
+.out/
+zensical.de.toml
+zensical.en.toml
+
+# Python environment
+.venv/
+__pycache__/
+
+# Sources mirrored from the public repositories (scripts/sync-sources.sh)
+.sources/
+*.png
+
+# API reference generated from the backend sources (scripts/build_i18n.py)
+docs/api/openapi.json

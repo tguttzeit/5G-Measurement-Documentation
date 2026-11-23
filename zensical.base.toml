@@ -1,0 +1,224 @@
+# Configuration of the public 5GMU documentation site.
+# Not built directly: scripts/build_i18n.py generates one config per language from it
+# (de/en, language selector in the header). The pages mirrored from the public
+# repositories and the dev docs stay English.
+[project]
+site_name = "5G-Messeinheit (5GMU)"
+site_description = "Nutzung, Wartung und Entwicklung der 5G-Messeinheit der Technischen Hochschule Augsburg"
+site_url = "https://docs.example.org/"
+copyright = "Technische Hochschule Augsburg"
+
+repo_url = "https://github.com/tguttzeit/5G-Measurement-Software"
+repo_name = "5G-Measurement-Software"
+extra_css = ["stylesheets/tha.css", "stylesheets/flugplanung.css"]
+
+nav = [
+  { "Start" = "index.md" },
+  { "Deutsch" = [
+    "de/index.md",
+    { "Messbox" = [
+    { "Nutzung" = [
+      "de/messbox/nutzung/index.md",
+      { "Messbox vorbereiten" = "de/messbox/nutzung/vorbereitung.md" },
+      { "Messfahrt" = "de/messbox/nutzung/messfahrt.md" },
+      { "Messflug" = "de/messbox/nutzung/messflug.md" },
+      { "Nach dem Einsatz" = "de/messbox/nutzung/abschluss.md" },
+      { "Wie die Messbox misst" = "de/messbox/nutzung/messung.md" },
+      { "Was gemessen wird" = "de/messbox/nutzung/messwerte.md" },
+      { "Fernbefehle" = "de/messbox/nutzung/fernbefehle.md" },
+      { "Konfiguration" = "de/messbox/nutzung/konfiguration.md" },
+    ] },
+    { "Wartung" = [
+      "de/messbox/wartung/index.md",
+      { "Akku und Stromversorgung" = "de/messbox/wartung/stromversorgung.md" },
+      { "Software aktualisieren" = "de/messbox/wartung/software-update.md" },
+    ] },
+    { "Troubleshooting" = [
+      "de/messbox/troubleshooting/index.md",
+      { "Fehlerbilder" = "de/messbox/troubleshooting/fehlerbilder.md" },
+    ] },
+    { "Development" = [
+      "de/messbox/dev/index.md",
+      { "Architektur" = "de/messbox/dev/architektur.md" },
+      { "Konfigurationsreferenz" = "de/messbox/dev/konfiguration.md" },
+      { "Hardware-Integration" = "de/messbox/dev/hardware-integration.md" },
+      { "Messbox aufsetzen" = "de/messbox/dev/messbox-aufsetzen.md" },
+      { "Lokal testen" = "de/messbox/dev/lokal-testen.md" },
+    ] },
+    ] },
+    { "Backend" = [
+      "de/backend/index.md",
+      { "Missionsstatus" = "de/backend/missionsstatus.md" },
+      { "Testvisualisierung" = "de/backend/testvisualisierung.md" },
+      { "Messläufe und Kampagnen" = "de/backend/messlaeufe.md" },
+      { "Karte und Export" = "de/backend/karte.md" },
+      { "Einstellungen" = "de/backend/einstellungen.md" },
+      { "Development" = [
+        "de/backend/dev/index.md",
+        { "Konfiguration" = "de/backend/dev/konfiguration.md" },
+        { "Gerät registrieren" = "de/backend/dev/geraet-registrieren.md" },
+        { "Deployment" = "de/backend/dev/deployment.md" },
+        { "Flent-Server" = "de/backend/dev/flent-server.md" },
+        { "Lokal testen" = "de/backend/dev/lokal-testen.md" },
+      ] },
+    ] },
+  ] },
+  { "English" = [
+    "en/index.md",
+    { "Measurement unit" = [
+    { "Usage" = [
+      "en/measurement-unit/usage/index.md",
+      { "Preparing the unit" = "en/measurement-unit/usage/preparation.md" },
+      { "Measurement drive" = "en/measurement-unit/usage/measurement-drive.md" },
+      { "Measurement flight" = "en/measurement-unit/usage/measurement-flight.md" },
+      { "After use" = "en/measurement-unit/usage/after-use.md" },
+      { "How the unit measures" = "en/measurement-unit/usage/measurement-runs.md" },
+      { "What is measured" = "en/measurement-unit/usage/measured-values.md" },
+      { "Remote commands" = "en/measurement-unit/usage/remote-commands.md" },
+      { "Configuration" = "en/measurement-unit/usage/configuration.md" },
+    ] },
+    { "Maintenance" = [
+      "en/measurement-unit/maintenance/index.md",
+      { "Power supply" = "en/measurement-unit/maintenance/power-supply.md" },
+      { "Updating the software" = "en/measurement-unit/maintenance/software-update.md" },
+    ] },
+    { "Troubleshooting" = [
+      "en/measurement-unit/troubleshooting/index.md",
+      { "Known failure modes" = "en/measurement-unit/troubleshooting/failure-modes.md" },
+    ] },
+    { "Development" = [
+      "en/measurement-unit/dev/index.md",
+      { "Architecture" = "en/measurement-unit/dev/architecture.md" },
+      { "Configuration reference" = "en/measurement-unit/dev/configuration.md" },
+      { "Hardware integration" = "en/measurement-unit/dev/hardware-integration.md" },
+      { "Setting up a unit" = "en/measurement-unit/dev/unit-setup.md" },
+      { "Local testing" = "en/measurement-unit/dev/local-testing.md" },
+    ] },
+    ] },
+    { "Backend" = [
+      "en/backend/index.md",
+      { "Mission status" = "en/backend/mission-status.md" },
+      { "Test visualization" = "en/backend/test-visualization.md" },
+      { "Runs and campaigns" = "en/backend/runs.md" },
+      { "Map and export" = "en/backend/map.md" },
+      { "Settings" = "en/backend/settings.md" },
+      { "Development" = [
+        "en/backend/dev/index.md",
+        { "Configuration" = "en/backend/dev/configuration.md" },
+        { "Device registration" = "en/backend/dev/device-registration.md" },
+        { "Deployment" = "en/backend/dev/deployment.md" },
+        { "Flent server" = "en/backend/dev/flent-server.md" },
+        { "Local testing" = "en/backend/dev/local-testing.md" },
+      ] },
+    ] },
+  ] },
+]
+
+[project.theme]
+language = "de"
+features = [
+  "announce.dismiss",
+  "content.code.annotate",
+  "content.code.copy",
+  "content.code.select",
+  "content.footnote.tooltips",
+  "content.tabs.link",
+  "content.tooltips",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  "navigation.path",
+  "navigation.sections",
+  "navigation.tabs",
+  "navigation.tabs.sticky",
+  "navigation.top",
+  "navigation.tracking",
+  "search.highlight",
+  "toc.follow",
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Zu hellem Design wechseln"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+primary = "custom"
+accent = "custom"
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Zu dunklem Design wechseln"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+primary = "custom"
+accent = "custom"
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Systemeinstellung verwenden"
+
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+tables = {}
+toc.permalink = true
+pymdownx.betterem = {}
+pymdownx.caret = {}
+pymdownx.details = {}
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.magiclink = {}
+pymdownx.mark = {}
+pymdownx.smartsymbols = {}
+pymdownx.superfences.custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+pymdownx.tabbed.alternate_style = true
+pymdownx.tabbed.combine_header_slug = true
+pymdownx.tasklist.custom_checkbox = true
+pymdownx.tilde = {}
+
+# Dev docs: pages and navigation section are generated from the docstrings of
+# the mirrored sources (scripts/sync-sources.sh has to run first).
+[project.plugins.api-autonav]
+modules = [".sources/5G-Measurement-Software/src/measurement_software"]
+api_root_uri = "reference"
+nav_section_title = "Code"
+
+[project.plugins.mkdocstrings.handlers.python]
+paths = [".sources/5G-Measurement-Software/src"]
+inventories = ["https://docs.python.org/3/objects.inv"]
+
+[project.plugins.mkdocstrings.handlers.python.options]
+docstring_section_style = "list"
+filters = "public"
+heading_level = 1
+merge_init_into_class = true
+parameter_headings = true
+separate_signature = true
+show_root_heading = true
+show_root_full_path = false
+show_signature_annotations = true
+show_source = true
+show_symbol_type_heading = true
+show_symbol_type_toc = true
+signature_crossrefs = true
+summary = true
+
+# Shown instead of repo_url in the header on backend pages (scripts/build_i18n.py, repo-switch.js).
+[project.extra.backend_repo]
+url = "https://github.com/tguttzeit/5G-Measurement-Backend"
+name = "5G-Measurement-Backend"

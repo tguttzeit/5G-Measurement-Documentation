@@ -1,0 +1,69 @@
+/* Flight planning calculator (javascripts/flugplanung.js) */
+.flugplanung {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.2rem;
+  padding: 0.8rem 1rem;
+  margin: 1em 0;
+}
+.flugplanung fieldset {
+  border: none;
+  margin: 0 0 0.6rem;
+  padding: 0;
+}
+.flugplanung legend {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.flugplanung .fp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: 0.5rem 1rem;
+}
+.flugplanung label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.7rem;
+  gap: 0.15rem;
+}
+.flugplanung input[type="text"] {
+  font: inherit;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.4rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.1rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+}
+.flugplanung input[data-derived="1"] {
+  background: var(--md-accent-fg-color--transparent);
+  border-style: dashed;
+  font-weight: 700;
+}
+.flugplanung .fp-check {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+}
+.flugplanung .fp-result {
+  margin: 0.4rem 0 0;
+  font-size: 0.75rem;
+}
+.flugplanung .fp-notes {
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  border-left: 0.2rem solid var(--md-warning-fg-color, #ff9100);
+  font-size: 0.75rem;
+}
+.flugplanung .fp-notes p { margin: 0.2rem 0; }
+.flugplanung button {
+  font: inherit;
+  font-size: 0.7rem;
+  margin-top: 0.4rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.1rem;
+  background: transparent;
+  color: var(--md-default-fg-color);
+  cursor: pointer;
+}

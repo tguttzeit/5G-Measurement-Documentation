@@ -1,0 +1,84 @@
+<mxfile host="65bd71144e">
+    <diagram id="gpsfixwaitact0000001" name="Page-1">
+        <mxGraphModel dx="660" dy="784" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry width="1330" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;b&gt;act&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;font-size: 11px; text-align: center;&quot;&gt;WAITING_FOR_GPS_FIX&lt;/span&gt;.do" style="strokeWidth=1;shape=umlFrame;whiteSpace=wrap;html=1;width=260;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="10" width="1310" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="edgeStyle=none;html=1;" parent="1" source="4" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="edgeStyle=none;html=1;" parent="1" source="5" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="edgeStyle=none;html=1;" parent="1" source="6" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="edgeStyle=none;html=1;" parent="1" source="7" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="[fix]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="17" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="" style="edgeStyle=none;html=1;" parent="1" source="8" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="edgeStyle=none;html=1;" parent="1" source="9" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="7" target="11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="[else]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="21" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;entryX=0.5;entryY=1;" parent="1" source="11" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="205" y="170"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="24" value="" style="edgeStyle=none;html=1;" parent="1" source="12" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="try_clock_sync()" style="strokeWidth=1;html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;fillColor=rgb(255, 255, 255);" parent="1" vertex="1">
+                    <mxGeometry x="630" y="75" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="strokeWidth=1;ellipse;fillColor=strokeColor;" parent="1" vertex="1">
+                    <mxGeometry x="18" y="80" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="check_remote_commands()" style="strokeWidth=1;html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;fillColor=rgb(255, 255, 255);" parent="1" vertex="1">
+                    <mxGeometry x="80" y="75" width="250" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="fix = poll_fix()" style="strokeWidth=1;html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;fillColor=rgb(255, 255, 255);" parent="1" vertex="1">
+                    <mxGeometry x="360" y="75" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="rhombus;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="75" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="reference = fix.position" style="strokeWidth=1;html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;fillColor=rgb(255, 255, 255);" parent="1" vertex="1">
+                    <mxGeometry x="830" y="75" width="170" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="send(gps_fix_detected)" style="strokeWidth=1;html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;fillColor=rgb(255, 255, 255);" parent="1" vertex="1">
+                    <mxGeometry x="1030" y="75" width="190" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="strokeWidth=1;ellipse;html=1;shape=endState;fillColor=strokeColor;" parent="1" vertex="1">
+                    <mxGeometry x="1252" y="80" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="log every wait_log_interval&lt;br&gt;(no sleep: the serial read paces the loop)" style="strokeWidth=1;html=1;align=center;verticalAlign=top;rounded=1;absoluteArcSize=1;arcSize=10;dashed=0;fillColor=rgb(255, 255, 255);" parent="1" vertex="1">
+                    <mxGeometry x="440" y="150" width="240" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

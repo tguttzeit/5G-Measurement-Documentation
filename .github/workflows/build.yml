@@ -1,0 +1,29 @@
+name: build
+
+# Checks that the site still builds. Publishing is not done here: the backend
+# server builds the public repository itself (see deploy/README.md).
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      # setup-uv has no moving major tag beyond v7, so pin the exact version.
+      - uses: astral-sh/setup-uv@v10.3.3
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --frozen
+
+      - name: Mirror the public source repositories
+        run: ./scripts/sync-sources.sh
+
+      - name: Build
+        run: uv run python scripts/build_i18n.py --strict

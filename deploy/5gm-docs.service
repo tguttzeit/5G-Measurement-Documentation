@@ -1,0 +1,39 @@
+[Unit]
+Description=Build and publish the 5GMU documentation site
+Documentation=https://github.com/tguttzeit/5G-Measurement-Documentation
+After=network-online.target
+Wants=network-online.target
+
+# Template: the @...@ placeholders are replaced when the unit is installed, see
+# deploy/README.md. Site-specific values (DOCS_SITE_URL) live in the untracked
+# @DOCS_BASE@/site.env.
+[Service]
+Type=oneshot
+User=@DOCS_USER@
+Group=@DOCS_USER@
+WorkingDirectory=@DOCS_BASE@/repo
+Environment=DOCS_BASE=@DOCS_BASE@
+Environment=DOCS_REPO=https://github.com/tguttzeit/5G-Measurement-Documentation.git
+Environment=DOCS_BRANCH=main
+Environment=DOCS_KEEP=5
+EnvironmentFile=-@DOCS_BASE@/site.env
+# The installer script puts uv in ~/.local/bin
+Environment=PATH=@DOCS_HOME@/.local/bin:/usr/local/bin:/usr/bin:/bin
+Environment=HOME=@DOCS_HOME@
+ExecStart=@DOCS_BASE@/repo/scripts/deploy.sh
+TimeoutStartSec=15min
+
+# The service only needs its own base directory and the network. ProtectHome
+# cannot be enabled while the base directory lives below a home directory.
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=no
+ReadWritePaths=@DOCS_BASE@
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+
+[Install]
+WantedBy=multi-user.target
