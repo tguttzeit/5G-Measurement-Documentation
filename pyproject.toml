@@ -1,6 +1,6 @@
 [project]
 name = "5gm-docs"
-version = "1.0.0"
+version = "1.1.0"
 description = "Öffentliche Dokumentation der 5G-Messeinheit (5GMU)"
 requires-python = ">=3.12"
 dependencies = []
